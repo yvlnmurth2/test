@@ -1,0 +1,21 @@
+FROM centos:8
+ENV PATH=$PATH:/opt/java/jdk-15.0.2/bin
+WORKDIR /opt/java
+RUN curl https://download.java.net/java/GA/jdk15.0.2/0d1cfde4252546c6931946de8db48ee2/7/GPL/openjdk-15.0.2_linux-x64_bin.tar.gz -o openjdk-15.0.2_linux-x64_bin.tar.gz
+RUN tar -xzf openjdk-15.0.2_linux-x64_bin.tar.gz && \
+    rm -rf openjdk-15.0.2_linux-x64_bin.tar.gz
+
+  
+#FROM registry.access.redhat.com/ubi8/ubi-minimal:8.1
+#ARG JAVA_PACKAGE=java-1.11.0-openjdk-headless
+#FROM adoptopenjdk/openjdk11
+
+COPY *.jar .
+chmod 777 *
+
+#RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
+
+EXPOSE 8081
+USER 1001
+
+ENTRYPOINT [ "java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar " ]
