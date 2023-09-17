@@ -10,6 +10,8 @@ RUN pwd
 RUN mkdir /deployments
 RUN chown 1001:root /deployments
 RUN chmod 777 /deployments
+RUN ls -l /opt/
+RUN ls -l /deployments
 COPY *.jar /deployments
 RUN chmod 777 /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar
 
@@ -19,4 +21,5 @@ RUN chmod 777 /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar
 EXPOSE 8082
 USER 1001
 
-ENTRYPOINT [ "/opt/java/jdk-15.0.2/bin/java  -jar /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar " ]
+#ENTRYPOINT [ "/opt/java/jdk-15.0.2/bin/java  -jar /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar " ]
+ENTRYPOINT [ "bash " ]
