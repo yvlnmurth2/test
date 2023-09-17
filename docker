@@ -27,7 +27,7 @@ USER 1001
 
 #ENTRYPOINT [ "/deployments/run-java.sh" ]
 
-CMD ["java -jar app.jar", "-Dquarkus.http.host=0.0.0.0"]
+CMD ["java -jar /deployments/app.jar", "-Dquarkus.http.host=0.0.0.0"]
 
 
 
