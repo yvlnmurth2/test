@@ -8,7 +8,7 @@ RUN mkdir /opt/java && curl https://download.java.net/java/GA/jdk15.0.2/0d1cfde4
 #FROM adoptopenjdk/openjdk11
 
 COPY *.jar .
-RUN chmod 777 *
+RUN chmod 777 getting-started-1.0.0-SNAPSHOT-prod.jar
 
 #RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
 
