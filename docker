@@ -25,8 +25,9 @@ COPY *.jar /deployments/app.jar
 EXPOSE 8080
 USER 1001
 
-ENTRYPOINT [ "/deployments/run-java.sh" ]
+#ENTRYPOINT [ "/deployments/run-java.sh" ]
 
+CMD ["java -jar app.jar", "-Dquarkus.http.host=0.0.0.0"]
 
 
 
