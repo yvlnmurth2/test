@@ -11,7 +11,7 @@ RUN tar -xzf openjdk-15.0.2_linux-x64_bin.tar.gz && \
 #FROM adoptopenjdk/openjdk11
 
 COPY *.jar .
-chmod 777 *
+RUN chmod 777 *
 
 #RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
 
