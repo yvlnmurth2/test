@@ -23,5 +23,5 @@ EXPOSE 8082
 
 CMD ["/opt/java/jdk-15.0.2/bin/java -jar /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar", "-Dquarkus.http.host=0.0.0.0"]
 
-@ENTRYPOINT [ "/opt/java/jdk-15.0.2/bin/java -jar /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar " ]
+#ENTRYPOINT [ "/opt/java/jdk-15.0.2/bin/java -jar /deployments/getting-started-1.0.0-SNAPSHOT-prod.jar " ]
 #ENTRYPOINT [ "sh" ]
