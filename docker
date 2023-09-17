@@ -1,3 +1,6 @@
-FROM adoptopenjdk/openjdk11
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.1
+ARG JAVA_PACKAGE=java-1.11.0-openjdk-headless
+
+#FROM adoptopenjdk/openjdk11
 COPY *.jar .
-java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
+RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
