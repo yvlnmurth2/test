@@ -3,4 +3,4 @@ ARG JAVA_PACKAGE=java-1.11.0-openjdk-headless
 
 #FROM adoptopenjdk/openjdk11
 COPY *.jar .
-RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar &
+RUN java  -jar getting-started-1.0.0-SNAPSHOT-prod.jar 
