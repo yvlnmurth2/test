@@ -28,7 +28,7 @@ COPY getting-started-1.0.0-SNAPSHOT-prod.jar /deployments/app.jar
 EXPOSE 8080
 USER 1001
 
-ENTRYPOINT  ["/deployments/run-java.sh -jar /deployments/app.jar" ]
+ENTRYPOINT  ["/deployments/run-java.sh" ]
 
 #FROM centos:8
 #ENV PATH=$PATH:/opt/java/jdk-15.0.2/bin
