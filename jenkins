@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+   agent {
+    kubernetes {
+      cloud 'openshift-test'  
+      inheritFrom 'jenkins-agent' any
+    }
+  }
     stages {
         stage('Stage 1') {
             steps {
