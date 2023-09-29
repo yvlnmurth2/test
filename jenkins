@@ -10,7 +10,7 @@ pipeline {
     stage('Publish Image') {
          steps{
             container('oc') {
-               sh "oc start-build build-with-docker --from-dir ." #5
+               sh "oc start-build build-with-docker --from-dir ." docker
             }
          }
         }
