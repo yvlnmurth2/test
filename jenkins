@@ -1,18 +1,18 @@
 pipeline {
     agent{
-    dockerfile {
-            filename 'docker'
-            dir 'build'
-            label 'my-docker'
-            args '-v /tmp:/tmp'
-        }
-    }
     stages {
         stage('Stage 1') {
             steps {
                 echo 'building ${JOB_NAME}'
                 echo 'Hello world!' 
             }
+        }
+    stage('Publish Image') {
+         steps{
+            container('oc') {
+               sh "oc start-build build-with-docker --from-dir ." #5
+            }
+         }
         }
     }
     post{
