@@ -10,6 +10,7 @@ pipeline {
     }
     post{
         success{
+            echo 'sending email!' 
         }
     }
 }
