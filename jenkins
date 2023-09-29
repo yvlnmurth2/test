@@ -1,11 +1,12 @@
 pipeline {
-    agent any 
+    agent{
     dockerfile {
             filename 'docker'
             dir 'build'
             label 'my-docker'
             args '-v /tmp:/tmp'
         }
+    }
     stages {
         stage('Stage 1') {
             steps {
