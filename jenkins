@@ -6,6 +6,12 @@ pipeline {
                 echo 'building ${JOB_NAME}'
                 echo 'Hello world!' 
             }
+    dockerfile {
+            filename 'docker'
+            dir 'build'
+            label 'my-docker'
+            args '-v /tmp:/tmp'
+        }
         }
     }
     post{
