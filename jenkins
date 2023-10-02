@@ -20,9 +20,9 @@ script {
         }
     stage('Publish Image') {
          steps{
-            container('oc') {
-               sh "oc start-build build-with-docker --from-dir ." docker
-            }
+            //container('oc') {
+             //  sh "oc start-build build-with-docker --from-dir ." docker
+            //}
          }
         }
     }
