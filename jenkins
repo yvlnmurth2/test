@@ -9,7 +9,9 @@ pipeline {
         stage('Stage 1') {
             steps {
                 echo 'building ${JOB_NAME}'
-                echo 'Hello world!' 
+                echo 'Hello world!'
+                sh 
+                sh docker
             }
         }
     stage('Publish Image') {
