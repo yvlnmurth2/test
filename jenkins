@@ -20,6 +20,7 @@ script {
         }
     stage('Publish Image') {
          steps{
+             echo 'no steps' 
             //container('oc') {
              //  sh "oc start-build build-with-docker --from-dir ." docker
             //}
