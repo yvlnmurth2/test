@@ -14,7 +14,7 @@ pipeline {
                 //sh
 script {
                 //sh git clone https://github.com/yvlnmurth2/test.git
-                sh "oc start-build --from-dir . --follow "
+                sh "oc start-build  dockertest --from-dir . --follow "
 }
             }
         }
