@@ -13,6 +13,7 @@ pipeline {
                 echo 'Hello world!'
                 //sh
 script {
+                sh git clone https://github.com/yvlnmurth2/test/edit/main/jenkins
                 sh "oc start-build build-with-docker --from-dir . --follow
 }
             }
