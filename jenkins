@@ -11,8 +11,10 @@ pipeline {
             steps {
                 echo 'building ${JOB_NAME}'
                 echo 'Hello world!'
-                //sh 
-                //sh "oc start-build build-with-docker --from-dir . --follow
+                //sh
+script {
+                sh "oc start-build build-with-docker --from-dir . --follow
+}
             }
         }
     stage('Publish Image') {
